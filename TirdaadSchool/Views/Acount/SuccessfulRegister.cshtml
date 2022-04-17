@@ -1,0 +1,20 @@
+﻿@model TirdaadSchool.DataLayer.Entities.User.User;
+@{
+    ViewData["Title"] = "ثبت نام با موفقیت انجام شد";
+}
+
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">آموزشگاه تیرداد</a></li>
+        <li class="breadcrumb-item active" aria-current="page">  ثبت نام با موفقیت انجام شد</li>
+    </ul>
+</nav>
+<div class=" alert alert-success">
+    
+    <h2>  @Model.UserName عزیز!</h2>
+  
+   <hr />
+    
+    <p> ثبت نام شما با  موفقیت انجام شد.ایمیلی حاوی کد فعالسازی به ادرس "@Model.Email" ارسال شده است</p>
+    <p>جهت تایید ثبت نام وارد ایمیل خود شوید و روی لینک ارسال شده کلیک کنید.</p>
+</div>

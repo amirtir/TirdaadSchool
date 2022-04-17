@@ -1,0 +1,11 @@
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\bin\Debug\netcoreapp2.1\TirdaadSchool.DataLayer.deps.json
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\bin\Debug\netcoreapp2.1\TirdaadSchool.DataLayer.dll
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\netcoreapp2.1\TirdaadSchool.DataLayer.csprojAssemblyReference.cache
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\netcoreapp2.1\TirdaadSchool.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\netcoreapp2.1\TirdaadSchool.DataLayer.AssemblyInfoInputs.cache
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\netcoreapp2.1\TirdaadSchool.DataLayer.AssemblyInfo.cs
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\bin\Debug\netcoreapp2.1\TirdaadSchool.DataLayer.runtimeconfig.json
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\bin\Debug\netcoreapp2.1\TirdaadSchool.DataLayer.runtimeconfig.dev.json
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\bin\Debug\netcoreapp2.1\TirdaadSchool.DataLayer.pdb
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\netcoreapp2.1\TirdaadSchool.DataLayer.dll
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\netcoreapp2.1\TirdaadSchool.DataLayer.pdb

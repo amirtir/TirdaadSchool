@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "فعالسازی حساب کاربری";
+}
+
+
+
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">آموزشگاه تیرداد</a></li>
+        <li class="breadcrumb-item active" aria-current="page">  فعالسازی حساب کاربری</li>
+    </ul>
+</nav>
+
+@if(ViewBag.IsActive==true)
+{
+<div class=" alert alert-success">
+
+    <h2>کاربر عزیز حساب کاربری شما با موفقیت فعال شد. در حال حاضر شما می توانید از امکانات سایت استفاده کنید.  </h2>
+    <hr />
+    
+    <div class="link">
+
+        <a href="/Login"> <i class="zmdi zmdi-account"></i> ورود به سایت </a>
+    </div>
+</div>
+}
+else
+{
+<div class=" alert alert-danger">
+
+    <h2>  متاسفانه حساب کاربری با مشخصات وارد شده پیدا نشد. لطفا لینک فعالسازی را مجددا بررسی و امتحان کنید. </h2>
+    <hr />
+    
+    <div class="link">
+
+        <a href="/Login"> <i class="zmdi zmdi-account"></i> ورود به سایت </a>
+    </div>
+</div>
+
+}
+
