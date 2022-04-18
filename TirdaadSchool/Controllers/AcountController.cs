@@ -72,7 +72,7 @@ namespace TirdaadSchool.Web.Controllers
                 Password = PasswordHelper.EncodePasswordMd5(registerViewModel.Password),
                 RegisterDate = DateTime.Now,
                 IsActive = false,
-                ActiveCode = GenerateTools.GenerateActiveCode(),
+                ActiveCode = GenerateTools.GenerateCode(),
                 UserAvatar = "Default.jpg",
             };
 

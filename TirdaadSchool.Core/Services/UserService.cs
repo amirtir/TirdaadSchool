@@ -9,6 +9,8 @@ using TirdaadSchool.Core.Security;
 using TirdaadSchool.Core.Convertor;
 using TirdaadSchool.Core.DTOs;
 using TirdaadSchool.Core.Generator;
+using System.IO;
+using TirdaadSchool.Core.Senders;
 
 namespace TirdaadSchool.Core.Services
 {
@@ -17,12 +19,15 @@ namespace TirdaadSchool.Core.Services
 
 
         private MyDbContext _DbContext;
+        private IViewRenderService _viewrender;
 
-        public UserService(MyDbContext DbContext)
+        public UserService(MyDbContext DbContext, IViewRenderService viewRender)
         {
             _DbContext = DbContext;
+            _viewrender = viewRender;
         }
 
+        #region Acount
         public bool IsUserNameExist(string username)
         {
             return _DbContext.Users.Any(u => u.UserName == username);
@@ -73,7 +78,7 @@ namespace TirdaadSchool.Core.Services
             }
 
             user.IsActive = true;
-            user.ActiveCode = GenerateTools.GenerateActiveCode();
+            user.ActiveCode = GenerateTools.GenerateCode();
             _DbContext.SaveChanges();
             return true;
 
@@ -106,7 +111,15 @@ namespace TirdaadSchool.Core.Services
         {
             return _DbContext.Users.SingleOrDefault(u => u.UserName == username);
         }
+        public User GetUserByUserId(int userid)
+        {
+            return _DbContext.Users.SingleOrDefault(u => u.UserId == userid);
+        }
+        #endregion
 
+
+
+        #region  UserPanel
         public InformationUserViewModel GetUserInformation(string username)
         {
             var user = GetUserByUserName(username);
@@ -133,10 +146,82 @@ namespace TirdaadSchool.Core.Services
         {
             return _DbContext.Users.Where(u => u.UserName == username).Select(u => new EditProfileViewModel()
             {
+                UserId=u.UserId,
                 UserName = u.UserName,
                 Email = u.Email,
                 AvatarName = u.UserAvatar
             }).Single();
         }
+
+        public void UpdateProfile(EditProfileViewModel model)
+        {
+            if (model.AvatarFile != null)
+
+
+            {
+                if (model.AvatarName != "Default.jpg")
+                {
+                    var imagepath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/UserAvatar", model.AvatarName);
+                    if (File.Exists(imagepath))
+                    {
+                        File.Delete(imagepath);
+                    }
+                }
+
+                model.AvatarName = GenerateTools.GenerateCode() + Path.GetExtension(model.AvatarFile.FileName);
+                Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/UserAvatar", model.AvatarName);
+                using (var stream= new FileStream(model.AvatarName, FileMode.Create))
+                {
+                    model.AvatarFile.CopyTo(stream);
+
+
+                }
+
+                var user = GetUserByUserId(model.UserId);
+                user.UserName = model.UserName;
+
+                if (user.Email != model.Email)
+                {
+
+                    string body = _viewrender.RenderToStringAsync("_ChangeEmail", user);
+
+                    SendEmail.Send(user.Email, "فعالسازی حساب کاربری", body);
+                }
+
+                user.Email = model.Email;
+                user.UserAvatar = model.AvatarName;
+                UpdateUser(user);
+
+            }
+
+            else
+            {
+                var user = GetUserByUserId(model.UserId);
+                user.UserName  = model.UserName;
+
+                if (user.Email != model.Email)
+                {
+                    user.IsActive = false;
+                    string body = _viewrender.RenderToStringAsync("_ChangeEmail", user);
+
+                    SendEmail.Send(model.Email, "فعالسازی حساب کاربری", body);
+                }
+
+                user.Email = FixedText.FixedEmail(model.Email);
+               
+                UpdateUser(user);
+            }
+
+           
+
+         
+
+        }
+
+
+
+        #endregion
+
+
     }
 }

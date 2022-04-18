@@ -7,7 +7,7 @@ namespace TirdaadSchool.Core.Generator
     public class GenerateTools
     {
 
-public static string GenerateActiveCode()
+public static string GenerateCode()
         {
             return Guid.NewGuid().ToString().Replace("-", "");
 

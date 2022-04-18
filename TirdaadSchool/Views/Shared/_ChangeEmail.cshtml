@@ -1,0 +1,18 @@
+﻿@model TirdaadSchool.DataLayer.Entities.User.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<div class="container-content" style="direction:rtl; padding:20px">
+
+    <h3>@Model.UserName  عزیز !</h3>
+
+
+    <p> ادرس ایمیل شما تغییر کرده است، برای فعالسازی حساب کاربری خود روی لینک زیر کلیک کنید.  </p>
+    <hr />
+    <p>
+        <a href="https://localhost:44324/Active/@Model.ActiveCode">تایید ادرس ایمیل جدید</a>
+    </p>
+</div>

@@ -8,6 +8,9 @@ namespace TirdaadSchool.Core.DTOs
 {
   public  class EditProfileViewModel
     {
+        [Display(Name ="کد کاربری")]
+        public int UserId { get; set; }
+
 
         [Display(Name = "نام کاربری")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]

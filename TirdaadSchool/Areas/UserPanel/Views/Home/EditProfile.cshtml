@@ -27,13 +27,22 @@
                         <div class="inner form-layer">
                             <form action="/UserPanel/EditProfile" method="post">
 
+                                @if(ViewBag.IsSucces!=null)
+                                {
+                                <div class="alert alert-success">
+                                    اطلاعات کاربری شما با موفقیت ویرایش شد.
+                                </div>
+
+                                }
                                 <div class="row">
 
-                                    <input type="hidden" asp-for="AvatarName" name="name" value="" />
+                                   
 
                                     <div class="col-md-7 col-sm-8 col-xs-12">
                                         <div class="input-group">
-                                            <span class="input-group-addon" id="email-address"><i class="zmdi zmdi-email"></i></span>
+                                            <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                                            <input type="hidden" asp-for="UserId" />
+                                            <input type="hidden" asp-for="AvatarName" />
                                             <input asp-for="UserName" type="text" class="form-control" placeholder="نام کاربری" aria-describedby="username">
                                         </div>
                                     </div>
@@ -47,15 +56,15 @@
 
                                     <div class="col-md-7 col-sm-8 col-xs-12">
                                         <div class="input-group">
-                                          
+
                                             <p class="help-block"> آواتار</p>
                                             <input asp-for="AvatarFile" type="file" name="name" value="" />
                                             <img class="thumbnail" style="max-width:130px" src="~/UserAvatar/@Model.AvatarName" alt="Alternate Text" />
                                         </div>
                                     </div>
 
-                             
-                                  
+
+
                                     <div class="col-md-7 col-sm-8 col-xs-12">
                                         <button class="btn btn-success"> ویرایش اطلاعات </button>
                                     </div>
@@ -63,7 +72,7 @@
 
                                 </div>
                                     
-                                </div>
+                               
 
                             </form>
                         </div>

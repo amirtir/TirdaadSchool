@@ -25,6 +25,7 @@ namespace TirdaadSchool.Core.Services.Interfaces
         InformationUserViewModel GetUserInformation(string username);
         InformationSidebarViewModel SideBarInformation(string username);
         EditProfileViewModel GetDataForEditProfileUser(string username);
+        void UpdateProfile(EditProfileViewModel model);
         #endregion
     }
 }
