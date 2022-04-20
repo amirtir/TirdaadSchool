@@ -65,7 +65,7 @@ namespace AspNetCore
         ");
                 EndContext();
                 BeginContext(388, 166, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "56258db8fb8b411186f19736093b2f3b", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe1ca3698d75499c8db5759208c4557c", async() => {
                     BeginContext(394, 153, true);
                     WriteLiteral("\r\n            <input type=\"text\" name=\"\" placeholder=\"چی دوست داری یاد بگیری ؟\">\r\n            <button><i class=\"zmdi zmdi-search\"></i></button>\r\n        ");
                     EndContext();

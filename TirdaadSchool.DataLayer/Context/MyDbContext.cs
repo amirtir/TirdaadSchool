@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TirdaadSchool.DataLayer.Entities.User;
+using TirdaadSchool.DataLayer.Entities.Wallet;
 
 namespace TirdaadSchool.DataLayer.Context
 {
@@ -23,7 +24,12 @@ namespace TirdaadSchool.DataLayer.Context
 
         #endregion
 
+        #region Wallet
 
+        public DbSet<WalletType> WalletTypes { get; set; }
+        public DbSet<Wallet> Wallets { get; set; }
+
+        #endregion
 
     }
 }

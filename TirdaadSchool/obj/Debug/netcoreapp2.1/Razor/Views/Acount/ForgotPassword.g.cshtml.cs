@@ -90,12 +90,12 @@ namespace AspNetCore
             WriteLiteral("        <header><h2> بازیابی کلمه عبور</h2></header>\r\n\r\n        <div class=\"form-layer\">\r\n\r\n            ");
             EndContext();
             BeginContext(786, 616, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b566ca6c40d4bb4a5dfdf7fc4c39a30", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b582906bddda416ca98b5c8b3bd9ecc6", async() => {
                 BeginContext(834, 180, true);
                 WriteLiteral("\r\n\r\n\r\n                <div class=\"input-group\">\r\n                    <span class=\"input-group-addon\" id=\"email-address\"><i class=\"zmdi zmdi-email\"></i></span>\r\n                    ");
                 EndContext();
                 BeginContext(1014, 109, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "f4d2cc8a3e7b415db390817159013264", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "72be291bf7dc4386ab94e9a9138c862c", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -123,7 +123,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\r\n\r\n                </div>\r\n                <div> ");
                 EndContext();
                 BeginContext(1173, 62, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bdb0b439a5bf449ca8f34e2d71c73eea", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c98553b93b4646ea9a2e2c883b2ab160", async() => {
                     BeginContext(1226, 2, true);
                     WriteLiteral("  ");
                     EndContext();

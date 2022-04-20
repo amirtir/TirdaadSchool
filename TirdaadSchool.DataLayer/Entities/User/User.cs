@@ -61,7 +61,7 @@ namespace TirdaadSchool.DataLayer.Entities.User
         #region Relations
 
         public virtual IList<UserRole> UserRoles { get; set; }
-
+        public virtual List<Wallet.Wallet> Wallets { get; set; }
 
         #endregion
 

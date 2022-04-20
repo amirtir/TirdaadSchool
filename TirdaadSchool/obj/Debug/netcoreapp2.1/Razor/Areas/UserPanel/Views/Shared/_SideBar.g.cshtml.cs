@@ -72,7 +72,7 @@ using TirdaadSchool.Core.DTOs;
             WriteLiteral("<div class=\"col-md-3 col-sm-4 col-xs-12\">\r\n    <aside>\r\n\r\n        <div class=\"avatar-layer\">\r\n            <div class=\"img-layer\">\r\n                <a href=\"\" class=\"change-image\"><i class=\"zmdi zmdi-edit\"></i></a>\r\n                ");
             EndContext();
             BeginContext(545, 41, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1fced09ca7db448c888863a8572fb8e1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "abedea5b73a94ad1a841e64933a311fd", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
