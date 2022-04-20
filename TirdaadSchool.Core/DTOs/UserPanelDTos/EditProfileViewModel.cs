@@ -24,6 +24,7 @@ namespace TirdaadSchool.Core.DTOs
         [EmailAddress(ErrorMessage = "ایمیل وارد شده صحیح نیست")]
         public string Email { get; set; }
 
+ 
         public IFormFile AvatarFile { get; set; }
 
         public string AvatarName { get; set; }

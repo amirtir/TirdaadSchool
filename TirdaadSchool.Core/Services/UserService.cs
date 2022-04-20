@@ -169,8 +169,8 @@ namespace TirdaadSchool.Core.Services
                 }
 
                 model.AvatarName = GenerateTools.GenerateCode() + Path.GetExtension(model.AvatarFile.FileName);
-                Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/UserAvatar", model.AvatarName);
-                using (var stream= new FileStream(model.AvatarName, FileMode.Create))
+              var imgpath=  Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/UserAvatar",model.AvatarName);
+                using (var stream= new FileStream(imgpath, FileMode.Create))
                 {
                     model.AvatarFile.CopyTo(stream);
 
@@ -212,10 +212,25 @@ namespace TirdaadSchool.Core.Services
                 UpdateUser(user);
             }
 
-           
-
          
 
+        }
+
+        public bool ChangePassword(string username,ChangePasswordViewModel changePasswordViewModel)
+        {
+          var user=  _DbContext.Users.Single(u => u.UserName == username);
+
+            var oldpassword = PasswordHelper.EncodePasswordMd5(changePasswordViewModel.OldPassword);
+            if(user.Password== oldpassword)
+            {
+                user.Password = PasswordHelper.EncodePasswordMd5(changePasswordViewModel.Password);
+                UpdateUser(user);
+                return true;
+            }
+
+            return false;
+    
+           
         }
 
 

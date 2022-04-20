@@ -47,3 +47,4 @@ C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\netcoreapp2.1\R
 C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ChangeEmail.g.cshtml.cs
 C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\netcoreapp2.1\Razor\Areas\UserPanel\Views\Shared\_SuccessfulProfileEdit.g.cshtml.cs
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\netcoreapp2.1\Razor\Areas\UserPanel\Views\Home\ChangePassword.g.cshtml.cs

@@ -41,6 +41,7 @@
     <None Include="wwwroot\js\jquery.validate.unobtrusive.min.js" />
     <None Include="wwwroot\js\modernizr-custom.js" />
     <None Include="wwwroot\js\script.js" />
+    <None Include="wwwroot\UserAvatar\1389cb287353449ea6287ed16f8544b4.jpg" />
   </ItemGroup>
 
   <ItemGroup>

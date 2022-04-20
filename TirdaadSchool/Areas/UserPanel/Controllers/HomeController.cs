@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TirdaadSchool.Core.Convertor;
 using TirdaadSchool.Core.DTOs;
+using TirdaadSchool.Core.Security;
 using TirdaadSchool.Core.Services.Interfaces;
 
 namespace TirdaadSchool.Web.Areas.UserPanel.Controllers
@@ -44,18 +46,7 @@ namespace TirdaadSchool.Web.Areas.UserPanel.Controllers
                 return View(model);
             }
 
-            if (_userservice.IsUserNameExist(model.UserName))
-            {
-                ModelState.AddModelError("UserName", "این نام کاربری قبلا ثبت شده است");
-                return View(model);
-            }
-
-
-            if (_userservice.IsEmailExist(FixedText.FixedEmail(model.Email)))
-            {
-                ModelState.AddModelError("Email", "این ایمیل قبلا ثبت شده است");
-                return View(model);
-            }
+           
 
             _userservice.UpdateProfile(model);
             ViewBag.IsSucces = true;
@@ -63,6 +54,40 @@ namespace TirdaadSchool.Web.Areas.UserPanel.Controllers
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
             return View("_SuccessfulProfileEdit");
+        }
+
+
+
+
+        [Route("/UserPanel/ChangePassword")]
+        [HttpGet]
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+
+
+        [Route("/UserPanel/ChangePassword")]
+        [HttpPost]
+        public IActionResult ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid){
+
+                return View(model);
+            }
+
+    
+
+            ViewBag.status = _userservice.ChangePassword(User.Identity.Name, model);
+
+            if (ViewBag.status == false)
+            {
+                ModelState.AddModelError("OldPassword", "رمز عبور فعلی اشتباه است");
+                return View(model);
+            }
+
+
+            return View(model);
         }
     }
 }

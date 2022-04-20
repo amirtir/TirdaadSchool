@@ -26,6 +26,7 @@ namespace TirdaadSchool.Core.Services.Interfaces
         InformationSidebarViewModel SideBarInformation(string username);
         EditProfileViewModel GetDataForEditProfileUser(string username);
         void UpdateProfile(EditProfileViewModel model);
+        bool ChangePassword(string username,ChangePasswordViewModel changePasswordViewModel);
         #endregion
     }
 }
