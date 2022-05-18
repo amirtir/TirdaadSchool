@@ -112,3 +112,15 @@ C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\TirdaadS
 C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\TirdaadSchool.Web.genruntimeconfig.cache
 C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\ref\TirdaadSchool.Web.dll
 C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\Razor\Areas\UserPanel\Views\Wallet\Index.cshtml.g.cs
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\bin\Debug\net5.0\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\bin\Debug\net5.0\Microsoft.VisualBasic.dll
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\bin\Debug\net5.0\ZarinpalSandbox.dll
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\bin\Debug\net5.0\runtimes\debian-x64\native\libuv.so
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\bin\Debug\net5.0\runtimes\fedora-x64\native\libuv.so
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\bin\Debug\net5.0\runtimes\opensuse-x64\native\libuv.so
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\bin\Debug\net5.0\runtimes\osx\native\libuv.dylib
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\bin\Debug\net5.0\runtimes\rhel-x64\native\libuv.so
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\bin\Debug\net5.0\runtimes\win7-arm\native\libuv.dll
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\bin\Debug\net5.0\runtimes\win7-x64\native\libuv.dll
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\bin\Debug\net5.0\runtimes\win7-x86\native\libuv.dll
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\Razor\Views\Home\OnlinePayment.cshtml.g.cs

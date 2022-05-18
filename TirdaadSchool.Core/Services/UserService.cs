@@ -278,7 +278,7 @@ namespace TirdaadSchool.Core.Services
             #endregion
         }
 
-        public void ChargeWallet(string username, int amount,string Description,  bool IsPay = false)
+        public int ChargeWallet(string username, int amount,string Description,  bool IsPay = false)
         {
             var user = GetUserByUserName(username);
             Wallet wallet = new Wallet()
@@ -290,12 +290,24 @@ namespace TirdaadSchool.Core.Services
                 TypeId = 1,
                 UserId = user.UserId
             };
-            AddWallet(wallet);
+           return AddWallet(wallet);
         }
 
-        public void AddWallet(Wallet wallet)
+        public int AddWallet(Wallet wallet)
         {
             _DbContext.Wallets.Add(wallet);
+            _DbContext.SaveChanges();
+            return wallet.WalletId;
+        }
+
+        public Wallet GetWalletByWalletId(int id)
+        {
+         return   _DbContext.Wallets.Find(id);
+        }
+
+        public void UpdateWallet(Wallet wallet)
+        {
+            _DbContext.Wallets.Update(wallet);
             _DbContext.SaveChanges();
         }
     }

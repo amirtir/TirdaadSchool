@@ -36,8 +36,10 @@ namespace TirdaadSchool.Core.Services.Interfaces
 
         int UserBalance(string username);
         List<WalletViewModel> GetWalletUser(string username);
-        void ChargeWallet (string username, int amount, string Description, bool IsPay=false);
-        void AddWallet(Wallet wallet);
+        int ChargeWallet (string username, int amount, string Description, bool IsPay=false);
+        int AddWallet(Wallet wallet);
+        Wallet GetWalletByWalletId(int id);
+        void UpdateWallet(Wallet wallet);
         #endregion
     }
 }
