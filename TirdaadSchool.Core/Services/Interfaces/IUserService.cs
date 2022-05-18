@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using TirdaadSchool.DataLayer.Entities.User;
 using TirdaadSchool.Core.DTOs;
+using TirdaadSchool.Core.DTOs.WalletDTOs;
+using TirdaadSchool.DataLayer.Entities.Wallet;
 
 namespace TirdaadSchool.Core.Services.Interfaces
 {
   public  interface IUserService
     {
+        IEnumerable<User> getAllUsers();
         bool IsUserNameExist( string username);
         bool IsEmailExist( string email);
         int AddUser(User user);
@@ -27,6 +30,14 @@ namespace TirdaadSchool.Core.Services.Interfaces
         EditProfileViewModel GetDataForEditProfileUser(string username);
         void UpdateProfile(EditProfileViewModel model);
         bool ChangePassword(string username,ChangePasswordViewModel changePasswordViewModel);
+        #endregion
+
+        #region Wallet
+
+        int UserBalance(string username);
+        List<WalletViewModel> GetWalletUser(string username);
+        void ChargeWallet (string username, int amount, string Description, bool IsPay=false);
+        void AddWallet(Wallet wallet);
         #endregion
     }
 }

@@ -15,19 +15,21 @@ namespace TirdaadSchool.DataLayer.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.14-servicing-32113")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("ProductVersion", "5.0.16")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("TirdaadSchool.DataLayer.Entities.User.Role", b =>
                 {
                     b.Property<int>("RoleId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("RoleName")
                         .IsRequired()
-                        .HasMaxLength(200);
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.HasKey("RoleId");
 
@@ -38,33 +40,41 @@ namespace TirdaadSchool.DataLayer.Migrations
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("ActiveCode")
                         .IsRequired()
-                        .HasMaxLength(200);
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(200);
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<bool>("IsActive")
-                        .HasMaxLength(200);
+                        .HasMaxLength(200)
+                        .HasColumnType("bit");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasMaxLength(200);
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<DateTime>("RegisterDate")
-                        .HasMaxLength(200);
+                        .HasMaxLength(200)
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("UserAvatar")
                         .IsRequired()
-                        .HasMaxLength(200);
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasMaxLength(200);
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.HasKey("UserId");
 
@@ -75,11 +85,14 @@ namespace TirdaadSchool.DataLayer.Migrations
                 {
                     b.Property<int>("UR_Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("RoleId");
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
 
-                    b.Property<int>("UserId");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
                     b.HasKey("UR_Id");
 
@@ -94,20 +107,27 @@ namespace TirdaadSchool.DataLayer.Migrations
                 {
                     b.Property<int>("WalletId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Amount");
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
 
-                    b.Property<DateTime>("CreateDate");
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(500);
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
-                    b.Property<bool>("IsPay");
+                    b.Property<bool>("IsPay")
+                        .HasColumnType("bit");
 
-                    b.Property<int>("TypeId");
+                    b.Property<int>("TypeId")
+                        .HasColumnType("int");
 
-                    b.Property<int>("UserId");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
                     b.HasKey("WalletId");
 
@@ -120,11 +140,13 @@ namespace TirdaadSchool.DataLayer.Migrations
 
             modelBuilder.Entity("TirdaadSchool.DataLayer.Entities.Wallet.WalletType", b =>
                 {
-                    b.Property<int>("TypeId");
+                    b.Property<int>("TypeId")
+                        .HasColumnType("int");
 
                     b.Property<string>("TypeTitle")
                         .IsRequired()
-                        .HasMaxLength(150);
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.HasKey("TypeId");
 
@@ -136,25 +158,54 @@ namespace TirdaadSchool.DataLayer.Migrations
                     b.HasOne("TirdaadSchool.DataLayer.Entities.User.Role", "role")
                         .WithMany("UserRoles")
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("TirdaadSchool.DataLayer.Entities.User.User", "user")
                         .WithMany("UserRoles")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("role");
+
+                    b.Navigation("user");
                 });
 
             modelBuilder.Entity("TirdaadSchool.DataLayer.Entities.Wallet.Wallet", b =>
                 {
-                    b.HasOne("TirdaadSchool.DataLayer.Entities.Wallet.WalletType", "WalletType")
+                    b.HasOne("TirdaadSchool.DataLayer.Entities.Wallet.WalletType", "Type")
                         .WithMany("Wallets")
                         .HasForeignKey("TypeId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("TirdaadSchool.DataLayer.Entities.User.User", "User")
                         .WithMany("Wallets")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Type");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("TirdaadSchool.DataLayer.Entities.User.Role", b =>
+                {
+                    b.Navigation("UserRoles");
+                });
+
+            modelBuilder.Entity("TirdaadSchool.DataLayer.Entities.User.User", b =>
+                {
+                    b.Navigation("UserRoles");
+
+                    b.Navigation("Wallets");
+                });
+
+            modelBuilder.Entity("TirdaadSchool.DataLayer.Entities.Wallet.WalletType", b =>
+                {
+                    b.Navigation("Wallets");
                 });
 #pragma warning restore 612, 618
         }

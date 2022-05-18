@@ -15,13 +15,15 @@ namespace TirdaadSchool.DataLayer.Entities.Wallet
         [Key]
         public int WalletId { get; set; }
 
-        [Display(Name = "نوع تراکنش")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        public int TypeId { get; set; }
 
         [Display(Name = "کاربر")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public int UserId { get; set; }
+
+        [Display(Name = "نوع تراکنش")]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        public int TypeId { get; set; }
+
 
         [Display(Name = "مبلغ")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
@@ -39,7 +41,7 @@ namespace TirdaadSchool.DataLayer.Entities.Wallet
 
 
         public virtual User.User User { get; set; }
-        public virtual WalletType WalletType { get; set; }
+        public virtual WalletType Type { get; set; }
 
 
     }

@@ -1,8 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
 using TirdaadSchool.DataLayer.Context;
 using TirdaadSchool.DataLayer.Entities.Wallet;
-using TirdaadSchool.DataLayer.Context;
+
 
 namespace TirdaadSchool.DataLayer.Migrations
 {

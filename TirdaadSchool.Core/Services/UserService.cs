@@ -11,6 +11,8 @@ using TirdaadSchool.Core.DTOs;
 using TirdaadSchool.Core.Generator;
 using System.IO;
 using TirdaadSchool.Core.Senders;
+using TirdaadSchool.Core.DTOs.WalletDTOs;
+using TirdaadSchool.DataLayer.Entities.Wallet;
 
 namespace TirdaadSchool.Core.Services
 {
@@ -28,6 +30,11 @@ namespace TirdaadSchool.Core.Services
         }
 
         #region Acount
+
+        public IEnumerable<User> getAllUsers()
+        {
+            return _DbContext.Users;
+        }
         public bool IsUserNameExist(string username)
         {
             return _DbContext.Users.Any(u => u.UserName == username);
@@ -128,7 +135,7 @@ namespace TirdaadSchool.Core.Services
             information.UserName = user.UserName;
             information.Email = user.Email;
             information.RegisterDate = user.RegisterDate;
-            information.Wallet = 0;
+            information.Wallet = UserBalance(username);
             return information;
         }
 
@@ -146,7 +153,7 @@ namespace TirdaadSchool.Core.Services
         {
             return _DbContext.Users.Where(u => u.UserName == username).Select(u => new EditProfileViewModel()
             {
-                UserId=u.UserId,
+                UserId = u.UserId,
                 UserName = u.UserName,
                 Email = u.Email,
                 AvatarName = u.UserAvatar
@@ -169,8 +176,8 @@ namespace TirdaadSchool.Core.Services
                 }
 
                 model.AvatarName = GenerateTools.GenerateCode() + Path.GetExtension(model.AvatarFile.FileName);
-              var imgpath=  Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/UserAvatar",model.AvatarName);
-                using (var stream= new FileStream(imgpath, FileMode.Create))
+                var imgpath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/UserAvatar", model.AvatarName);
+                using (var stream = new FileStream(imgpath, FileMode.Create))
                 {
                     model.AvatarFile.CopyTo(stream);
 
@@ -197,7 +204,7 @@ namespace TirdaadSchool.Core.Services
             else
             {
                 var user = GetUserByUserId(model.UserId);
-                user.UserName  = model.UserName;
+                user.UserName = model.UserName;
 
                 if (user.Email != model.Email)
                 {
@@ -208,20 +215,20 @@ namespace TirdaadSchool.Core.Services
                 }
 
                 user.Email = FixedText.FixedEmail(model.Email);
-               
+
                 UpdateUser(user);
             }
 
-         
+
 
         }
 
-        public bool ChangePassword(string username,ChangePasswordViewModel changePasswordViewModel)
+        public bool ChangePassword(string username, ChangePasswordViewModel changePasswordViewModel)
         {
-          var user=  _DbContext.Users.Single(u => u.UserName == username);
+            var user = _DbContext.Users.Single(u => u.UserName == username);
 
             var oldpassword = PasswordHelper.EncodePasswordMd5(changePasswordViewModel.OldPassword);
-            if(user.Password== oldpassword)
+            if (user.Password == oldpassword)
             {
                 user.Password = PasswordHelper.EncodePasswordMd5(changePasswordViewModel.Password);
                 UpdateUser(user);
@@ -229,14 +236,67 @@ namespace TirdaadSchool.Core.Services
             }
 
             return false;
-    
-           
+
+
         }
+
+
+
+
+
+
 
 
 
         #endregion
 
 
+
+        #region Wallet
+        public int UserBalance(string username)
+        {
+            var user = GetUserByUserName(username);
+            var Deposit = _DbContext.Wallets.Where(w => w.UserId == user.UserId && w.TypeId == 1&& w.IsPay==true).Select(w => w.Amount).ToList();
+            var Withdraw = _DbContext.Wallets.Where(w => w.UserId == user.UserId && w.TypeId == 2&& w.IsPay == true).Select(w => w.Amount).ToList();
+            var balance = (Deposit.Sum() - Withdraw.Sum());
+            return balance;
+        }
+
+        public List<WalletViewModel> GetWalletUser(string username)
+        {
+            var user = GetUserByUserName(username);
+            return _DbContext.Wallets.Where(w => w.UserId == user.UserId && w.IsPay == true)
+                  .Select(w => new WalletViewModel()
+                  {
+                      Amount = w.Amount,
+                      Type = w.TypeId,
+                      Description = w.Description,
+                      DateTime = w.CreateDate
+                  })
+                  .ToList();
+
+            #endregion
+        }
+
+        public void ChargeWallet(string username, int amount,string Description,  bool IsPay = false)
+        {
+            var user = GetUserByUserName(username);
+            Wallet wallet = new Wallet()
+            {
+                Amount = amount,
+                CreateDate = DateTime.Now,
+                Description = Description,
+                IsPay = IsPay,
+                TypeId = 1,
+                UserId = user.UserId
+            };
+            AddWallet(wallet);
+        }
+
+        public void AddWallet(Wallet wallet)
+        {
+            _DbContext.Wallets.Add(wallet);
+            _DbContext.SaveChanges();
+        }
     }
 }

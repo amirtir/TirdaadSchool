@@ -1,0 +1,15 @@
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\bin\Debug\net5.0\TirdaadSchool.DataLayer.deps.json
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\bin\Debug\net5.0\TirdaadSchool.DataLayer.runtimeconfig.json
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\bin\Debug\net5.0\TirdaadSchool.DataLayer.runtimeconfig.dev.json
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\bin\Debug\net5.0\TirdaadSchool.DataLayer.dll
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\bin\Debug\net5.0\TirdaadSchool.DataLayer.pdb
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\net5.0\TirdaadSchool.DataLayer.csproj.AssemblyReference.cache
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\net5.0\TirdaadSchool.DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\net5.0\TirdaadSchool.DataLayer.AssemblyInfoInputs.cache
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\net5.0\TirdaadSchool.DataLayer.AssemblyInfo.cs
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\net5.0\TirdaadSchool.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\net5.0\TirdaadSchool.DataLayer.dll
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\net5.0\refint\TirdaadSchool.DataLayer.dll
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\net5.0\TirdaadSchool.DataLayer.pdb
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\net5.0\TirdaadSchool.DataLayer.genruntimeconfig.cache
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool.DataLayer\obj\Debug\net5.0\ref\TirdaadSchool.DataLayer.dll

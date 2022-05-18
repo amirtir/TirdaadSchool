@@ -1,0 +1,332 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\BlazorApp1\\BlazorApp1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\BlazorApp1\\BlazorApp1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\BlazorApp1\\BlazorApp1.csproj",
+        "projectName": "BlazorApp1",
+        "projectPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\BlazorApp1\\BlazorApp1.csproj",
+        "packagesPath": "C:\\Users\\Amir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\BlazorApp1\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Amir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.Core\\TirdaadSchool.Core.csproj": {
+                "projectPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.Core\\TirdaadSchool.Core.csproj"
+              },
+              "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj": {
+                "projectPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj"
+              },
+              "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool\\TirdaadSchool.Web.csproj": {
+                "projectPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool\\TirdaadSchool.Web.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.browser-wasm",
+              "version": "[5.0.16, 5.0.16]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.Core\\TirdaadSchool.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.Core\\TirdaadSchool.Core.csproj",
+        "projectName": "TirdaadSchool.Core",
+        "projectPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.Core\\TirdaadSchool.Core.csproj",
+        "packagesPath": "C:\\Users\\Amir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Amir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj": {
+                "projectPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj",
+        "projectName": "TirdaadSchool.DataLayer",
+        "projectPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj",
+        "packagesPath": "C:\\Users\\Amir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Amir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool\\TirdaadSchool.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool\\TirdaadSchool.Web.csproj",
+        "projectName": "TirdaadSchool.Web",
+        "projectPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool\\TirdaadSchool.Web.csproj",
+        "packagesPath": "C:\\Users\\Amir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Amir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.Core\\TirdaadSchool.Core.csproj": {
+                "projectPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.Core\\TirdaadSchool.Core.csproj"
+              },
+              "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj": {
+                "projectPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
