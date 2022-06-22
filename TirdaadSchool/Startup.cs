@@ -35,7 +35,7 @@ namespace TirdaadSchool
         {
 
             services.AddMvc();
-
+            services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -49,13 +49,14 @@ namespace TirdaadSchool
             });
 
 
-            services.AddDbContext<MyDbContext>(options => {
+            services.AddDbContext<MyDbContext>(options =>
+            {
                 options.UseSqlServer(configuration.GetConnectionString("TirdaadSchool_ConnectionString"));
             });
 
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IViewRenderService, RenderViewToString>();
-
+            services.AddTransient<IPermissionService, PermissionService>();
 
 
         }
@@ -73,21 +74,26 @@ namespace TirdaadSchool
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-         
+
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute( "areas","{area:exists}/{controller=Home}/{action=Index}/{id?}"
-                );
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute("areas", "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+            //    );
 
-                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
-             
+            //    endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
+
+            //});
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("areas", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute("default", "{controller=Home}/{action=Index}");
             });
 
-           
 
             app.Run(async (context) =>
             {

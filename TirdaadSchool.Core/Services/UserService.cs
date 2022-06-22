@@ -10,9 +10,11 @@ using TirdaadSchool.Core.Convertor;
 using TirdaadSchool.Core.DTOs;
 using TirdaadSchool.Core.Generator;
 using System.IO;
+using System.Runtime.CompilerServices;
 using TirdaadSchool.Core.Senders;
 using TirdaadSchool.Core.DTOs.WalletDTOs;
 using TirdaadSchool.DataLayer.Entities.Wallet;
+using TirdaadSchool.Core.DTOs.AdminPanelDTOs;
 
 namespace TirdaadSchool.Core.Services
 {
@@ -35,6 +37,7 @@ namespace TirdaadSchool.Core.Services
         {
             return _DbContext.Users;
         }
+
         public bool IsUserNameExist(string username)
         {
             return _DbContext.Users.Any(u => u.UserName == username);
@@ -96,6 +99,7 @@ namespace TirdaadSchool.Core.Services
             return _DbContext.Users.SingleOrDefault(u => u.Email == email);
         }
 
+
         public bool ResetPassword(ResetPasswordViewModel resetPasswordViewModel)
         {
             var user = _DbContext.Users.SingleOrDefault(u => u.ActiveCode == resetPasswordViewModel.ActiveCode);
@@ -118,15 +122,18 @@ namespace TirdaadSchool.Core.Services
         {
             return _DbContext.Users.SingleOrDefault(u => u.UserName == username);
         }
+
         public User GetUserByUserId(int userid)
         {
             return _DbContext.Users.SingleOrDefault(u => u.UserId == userid);
         }
+
         #endregion
 
 
 
-        #region  UserPanel
+        #region UserPanel
+
         public InformationUserViewModel GetUserInformation(string username)
         {
             var user = GetUserByUserName(username);
@@ -168,7 +175,8 @@ namespace TirdaadSchool.Core.Services
             {
                 if (model.AvatarName != "Default.jpg")
                 {
-                    var imagepath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/UserAvatar", model.AvatarName);
+                    var imagepath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/UserAvatar",
+                        model.AvatarName);
                     if (File.Exists(imagepath))
                     {
                         File.Delete(imagepath);
@@ -240,24 +248,19 @@ namespace TirdaadSchool.Core.Services
 
         }
 
-
-
-
-
-
-
-
-
         #endregion
 
 
 
         #region Wallet
+
         public int UserBalance(string username)
         {
             var user = GetUserByUserName(username);
-            var Deposit = _DbContext.Wallets.Where(w => w.UserId == user.UserId && w.TypeId == 1&& w.IsPay==true).Select(w => w.Amount).ToList();
-            var Withdraw = _DbContext.Wallets.Where(w => w.UserId == user.UserId && w.TypeId == 2&& w.IsPay == true).Select(w => w.Amount).ToList();
+            var Deposit = _DbContext.Wallets.Where(w => w.UserId == user.UserId && w.TypeId == 1 && w.IsPay == true)
+                .Select(w => w.Amount).ToList();
+            var Withdraw = _DbContext.Wallets.Where(w => w.UserId == user.UserId && w.TypeId == 2 && w.IsPay == true)
+                .Select(w => w.Amount).ToList();
             var balance = (Deposit.Sum() - Withdraw.Sum());
             return balance;
         }
@@ -266,19 +269,19 @@ namespace TirdaadSchool.Core.Services
         {
             var user = GetUserByUserName(username);
             return _DbContext.Wallets.Where(w => w.UserId == user.UserId && w.IsPay == true)
-                  .Select(w => new WalletViewModel()
-                  {
-                      Amount = w.Amount,
-                      Type = w.TypeId,
-                      Description = w.Description,
-                      DateTime = w.CreateDate
-                  })
-                  .ToList();
+                .Select(w => new WalletViewModel()
+                {
+                    Amount = w.Amount,
+                    Type = w.TypeId,
+                    Description = w.Description,
+                    DateTime = w.CreateDate
+                })
+                .ToList();
 
-            #endregion
+
         }
 
-        public int ChargeWallet(string username, int amount,string Description,  bool IsPay = false)
+        public int ChargeWallet(string username, int amount, string Description, bool IsPay = false)
         {
             var user = GetUserByUserName(username);
             Wallet wallet = new Wallet()
@@ -290,7 +293,7 @@ namespace TirdaadSchool.Core.Services
                 TypeId = 1,
                 UserId = user.UserId
             };
-           return AddWallet(wallet);
+            return AddWallet(wallet);
         }
 
         public int AddWallet(Wallet wallet)
@@ -302,13 +305,131 @@ namespace TirdaadSchool.Core.Services
 
         public Wallet GetWalletByWalletId(int id)
         {
-         return   _DbContext.Wallets.Find(id);
+            return _DbContext.Wallets.Find(id);
         }
 
         public void UpdateWallet(Wallet wallet)
         {
             _DbContext.Wallets.Update(wallet);
             _DbContext.SaveChanges();
+        }
+
+
+
+        #endregion
+
+
+        #region AdminPanel
+
+        public FilterUsersViewModel GetFilterUsers(int pageid = 1, string FilterEmail = "", string FilterUserName = "")
+        {
+            IQueryable<User> result = _DbContext.Users;
+
+            if (!string.IsNullOrEmpty(FilterEmail))
+            {
+                result = result.Where(x => x.Email.Contains(FilterEmail));
+            }
+
+            if (!string.IsNullOrEmpty(FilterUserName))
+            {
+                result = result.Where(x => x.UserName.Contains(FilterUserName));
+            }
+
+            //Show
+            int take = 10;
+            int skip = (pageid - 1) * take;
+
+            FilterUsersViewModel res = new FilterUsersViewModel();
+            res.users = result.OrderBy(u => u.RegisterDate).Skip(skip).Take(take).ToList();
+            res.CurrentPage = pageid;
+            res.PageCount = result.Count() / take;
+
+            return res;
+        }
+
+        public int AddUserByAdmin(NewUserViewModel newUser)
+        {
+            User user = new User();
+            user.Email = newUser.Email;
+            user.UserName = newUser.UserName;
+            user.Password = PasswordHelper.EncodePasswordMd5(newUser.Password);
+            if (newUser.AvatarFile != null)
+            {
+                user.UserAvatar = GenerateTools.GenerateCode() + Path.GetExtension(newUser.AvatarFile.FileName);
+                var imgpath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/UserAvatar", user.UserAvatar);
+                using (var stream = new FileStream(imgpath, FileMode.Create))
+                {
+                    newUser.AvatarFile.CopyTo(stream);
+
+
+                }
+            }
+            else
+            {
+                user.UserAvatar = "/UserAvatar/Default.jpg";
+            }
+
+            user.ActiveCode = GenerateTools.GenerateCode();
+            user.RegisterDate = DateTime.Now;
+            user.IsActive = true;
+
+            return AddUser(user);
+
+        }
+
+        public EditUserViewModel GetUserForEditMode(int userid)
+        {
+            return _DbContext.Users.Where(u => u.UserId == userid).Select(u => new EditUserViewModel()
+                {
+                    UserId = u.UserId,
+                    UserName = u.UserName,
+                    Email = u.Email,
+                    AvatarName = u.UserAvatar,
+                    //Password = u.Password,
+                    UserRoles = u.UserRoles.Select(r => r.RoleId).ToList()
+                }
+            ).Single();
+
+        }
+
+        public int EditUserByAdmin(EditUserViewModel editUser)
+        {
+            User user = GetUserByUserId(editUser.UserId);
+            user.Email = editUser.Email;
+            if (!string.IsNullOrEmpty(editUser.Password))
+            {
+                user.Password = PasswordHelper.EncodePasswordMd5(editUser.Password);
+            }
+
+            if (editUser.AvatarFile != null)
+            {
+                if (editUser.AvatarName != "Default.jpg")
+                {
+                    //Delete Old Image
+                    string deletpath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/UserAvatar",
+                        editUser.AvatarName);
+                    if (File.Exists(deletpath))
+                    {
+                        File.Delete(deletpath);
+                    }
+                }
+
+                //Save New Image
+                user.UserAvatar = GenerateTools.GenerateCode() + Path.GetExtension(editUser.AvatarFile.FileName);
+                var imgpath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/UserAvatar", user.UserAvatar);
+                using (var stream = new FileStream(imgpath, FileMode.Create))
+                {
+                    editUser.AvatarFile.CopyTo(stream);
+
+                }
+
+                _DbContext.Update(user);
+                _DbContext.SaveChanges();
+            }
+
+            return user.UserId;
+
+            #endregion
         }
     }
 }

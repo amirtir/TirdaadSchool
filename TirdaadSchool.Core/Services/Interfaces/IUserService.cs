@@ -5,6 +5,7 @@ using TirdaadSchool.DataLayer.Entities.User;
 using TirdaadSchool.Core.DTOs;
 using TirdaadSchool.Core.DTOs.WalletDTOs;
 using TirdaadSchool.DataLayer.Entities.Wallet;
+using TirdaadSchool.Core.DTOs.AdminPanelDTOs;
 
 namespace TirdaadSchool.Core.Services.Interfaces
 {
@@ -18,6 +19,7 @@ namespace TirdaadSchool.Core.Services.Interfaces
         int UpdateUser(User user);
         User LoginUser(LoginviewModel loginViewModel);
         User GetUserByEmail( string email);
+        User GetUserByUserId(int userid);    
         User GetUserByUserName(string username);
         bool ResetPassword(ResetPasswordViewModel resetPasswordViewModel);
 
@@ -40,6 +42,16 @@ namespace TirdaadSchool.Core.Services.Interfaces
         int AddWallet(Wallet wallet);
         Wallet GetWalletByWalletId(int id);
         void UpdateWallet(Wallet wallet);
+        #endregion
+
+
+        #region AdminPanel
+
+        FilterUsersViewModel GetFilterUsers(int pageid=1, string filterEmail="", string FilterUserName="" );
+        public int AddUserByAdmin(NewUserViewModel newUser);
+        public EditUserViewModel GetUserForEditMode(int userid);
+        public  int EditUserByAdmin(EditUserViewModel editUser);
+
         #endregion
     }
 }

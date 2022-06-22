@@ -22,6 +22,8 @@ namespace TirdaadSchool.Web.Areas.UserPanel.Controllers
          ViewBag.list= _userService.GetWalletUser(User.Identity.Name);
             return View();
         }
+
+
         [Route("/UserPanel/Wallet")]
         [HttpPost]
         public IActionResult Index( WalletChargeViewModel charge)
