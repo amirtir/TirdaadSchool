@@ -30,6 +30,12 @@ namespace TirdaadSchool.DataLayer.Context
         public DbSet<Wallet> Wallets { get; set; }
 
         #endregion
-
+      
+        protected override void OnModelCreating(ModelBuilder model)
+        {
+            model.Entity<User>().HasQueryFilter(u => !u.IsDeleted);
+            model.Entity<Role>().HasQueryFilter(r => !r.IsDeleted);
+            base.OnModelCreating(model);
+        }
     }
 }

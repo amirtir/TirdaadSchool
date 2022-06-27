@@ -131,3 +131,9 @@ C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\Razor\Pa
 C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\Razor\Pages\Admin\Users\Index.cshtml.g.cs
 C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\Razor\Pages\Admin\Users\NewUser.cshtml.g.cs
 C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\Razor\Pages\Admin\Users\EditUser.cshtml.g.cs
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\Razor\Pages\Admin\Users\DeletedUsers.cshtml.g.cs
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\Razor\Pages\Admin\Users\DeleteUser.cshtml.g.cs
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\Razor\Pages\Admin\Roles\Index.cshtml.g.cs
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\Razor\Pages\Admin\Roles\NewRole.cshtml.g.cs
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\Razor\Pages\Admin\Roles\EditRole.cshtml.g.cs
+C:\Users\Amir\source\repos\TirdaadSchool\TirdaadSchool\obj\Debug\net5.0\Razor\Pages\Admin\Roles\DeleteRole.cshtml.g.cs

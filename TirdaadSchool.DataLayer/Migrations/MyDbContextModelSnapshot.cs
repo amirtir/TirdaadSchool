@@ -26,6 +26,9 @@ namespace TirdaadSchool.DataLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("RoleName")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -55,6 +58,9 @@ namespace TirdaadSchool.DataLayer.Migrations
 
                     b.Property<bool>("IsActive")
                         .HasMaxLength(200)
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Password")

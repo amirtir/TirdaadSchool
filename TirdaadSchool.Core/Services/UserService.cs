@@ -15,6 +15,7 @@ using TirdaadSchool.Core.Senders;
 using TirdaadSchool.Core.DTOs.WalletDTOs;
 using TirdaadSchool.DataLayer.Entities.Wallet;
 using TirdaadSchool.Core.DTOs.AdminPanelDTOs;
+using Microsoft.EntityFrameworkCore;
 
 namespace TirdaadSchool.Core.Services
 {
@@ -143,6 +144,17 @@ namespace TirdaadSchool.Core.Services
             information.Email = user.Email;
             information.RegisterDate = user.RegisterDate;
             information.Wallet = UserBalance(username);
+            return information;
+        }
+        public InformationUserViewModel GetUserInformation(int userid)
+        {
+            var user = GetUserByUserId(userid);
+
+            InformationUserViewModel information = new InformationUserViewModel();
+            information.UserName = user.UserName;
+            information.Email = user.Email;
+            information.RegisterDate = user.RegisterDate;
+            information.Wallet = UserBalance(user.UserName);
             return information;
         }
 
@@ -431,5 +443,40 @@ namespace TirdaadSchool.Core.Services
 
             #endregion
         }
+
+        public FilterUsersViewModel GetDeletedFilterUsers(int pageid = 1, string filterEmail = "", string FilterUserName = "")
+        {
+            IQueryable<User> result = _DbContext.Users.IgnoreQueryFilters().Where(u=>u.IsDeleted==true);
+
+            if (!string.IsNullOrEmpty(filterEmail))
+            {
+                result = result.Where(x => x.Email.Contains(filterEmail));
+            }
+
+            if (!string.IsNullOrEmpty(FilterUserName))
+            {
+                result = result.Where(x => x.UserName.Contains(FilterUserName));
+            }
+
+            //Show
+            int take = 10;
+            int skip = (pageid - 1) * take;
+
+            FilterUsersViewModel res = new FilterUsersViewModel();
+            res.users = result.OrderBy(u => u.RegisterDate).Skip(skip).Take(take).ToList();
+            res.CurrentPage = pageid;
+            res.PageCount = result.Count() / take;
+
+            return res;
+        }
+
+        public void DeleteUser(int userid)
+        {
+            User user = GetUserByUserId(userid);
+            user.IsDeleted = true;
+            UpdateUser(user);
+        }
+
+        
     }
 }

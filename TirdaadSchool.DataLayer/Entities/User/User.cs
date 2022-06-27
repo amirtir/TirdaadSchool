@@ -62,7 +62,7 @@ namespace TirdaadSchool.DataLayer.Entities.User
 
         public virtual IList<UserRole> UserRoles { get; set; }
         public virtual List<Wallet.Wallet> Wallets { get; set; }
-       
+        public bool IsDeleted { get; set; }
 
         #endregion
 

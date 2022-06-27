@@ -10,13 +10,13 @@ namespace TirdaadSchool.DataLayer.Entities.User
         [Key]
         public int RoleId { get; set; }
 
-        [Display(Name ="")]
+        [Display(Name ="نام نقش")]
         [Required(ErrorMessage ="لطفا {0} را وارد کنید")]
         [MaxLength(200,ErrorMessage =" {1} نمی تواند بیشتر از {0} باشد")]
 
         public string RoleName { get; set; }
 
-
+        public bool IsDeleted { get; set; }
         #region Relations
 
         public virtual IList<UserRole> UserRoles { get; set; }

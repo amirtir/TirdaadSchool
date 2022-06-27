@@ -22,12 +22,13 @@ namespace TirdaadSchool.Core.Services.Interfaces
         User GetUserByUserId(int userid);    
         User GetUserByUserName(string username);
         bool ResetPassword(ResetPasswordViewModel resetPasswordViewModel);
-
+        void DeleteUser(int userid);
 
 
         #region UserPanel
 
         InformationUserViewModel GetUserInformation(string username);
+        InformationUserViewModel GetUserInformation(int userid);
         InformationSidebarViewModel SideBarInformation(string username);
         EditProfileViewModel GetDataForEditProfileUser(string username);
         void UpdateProfile(EditProfileViewModel model);
@@ -48,6 +49,7 @@ namespace TirdaadSchool.Core.Services.Interfaces
         #region AdminPanel
 
         FilterUsersViewModel GetFilterUsers(int pageid=1, string filterEmail="", string FilterUserName="" );
+        FilterUsersViewModel GetDeletedFilterUsers(int pageid = 1, string filterEmail = "", string FilterUserName = "");
         public int AddUserByAdmin(NewUserViewModel newUser);
         public EditUserViewModel GetUserForEditMode(int userid);
         public  int EditUserByAdmin(EditUserViewModel editUser);

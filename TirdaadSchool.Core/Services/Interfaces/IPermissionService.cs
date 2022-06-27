@@ -10,6 +10,10 @@ namespace TirdaadSchool.Core.Services.Interfaces
     public interface IPermissionService
     {
         List<Role> GetRoles();
+        int AddRole(Role role);
+        int UpdateRole(Role role);
+        void DeleteRole(Role role);
+        Role GetRoleById(int id);
         void AddRolesToUser(List<int> roleIds,int userid);
         void EditRolesToUser(List<int> roleIds, int userid);
     }
