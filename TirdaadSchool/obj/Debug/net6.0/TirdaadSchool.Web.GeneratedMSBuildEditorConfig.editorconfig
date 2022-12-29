@@ -1,0 +1,184 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TirdaadSchool.Web
+build_property.RootNamespace = TirdaadSchool.Web
+build_property.ProjectDir = F:\projects\c#\TirdaadSchool\TirdaadSchool\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = F:\projects\c#\TirdaadSchool\TirdaadSchool
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Areas/UserPanel/Views/Home/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXEhvbWVcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Areas/UserPanel/Views/Home/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXEhvbWVcRWRpdFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Areas/UserPanel/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Areas/UserPanel/Views/Shared/_SideBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXFNoYXJlZFxfU2lkZUJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Areas/UserPanel/Views/Shared/_SuccessfulProfileEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXFNoYXJlZFxfU3VjY2Vzc2Z1bFByb2ZpbGVFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Areas/UserPanel/Views/Wallet/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXFdhbGxldFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Areas/UserPanel/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Areas/UserPanel/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/Admin/Courses/CreateCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cnNlc1xDcmVhdGVDb3Vyc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/Admin/Courses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cnNlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/Admin/Roles/DeleteRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9sZXNcRGVsZXRlUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/Admin/Roles/EditRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9sZXNcRWRpdFJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/Admin/Roles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/Admin/Roles/NewRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9sZXNcTmV3Um9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/Admin/Users/DeletedUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcRGVsZXRlZFVzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/Admin/Users/DeleteUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcRGVsZXRlVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/Admin/Users/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcRWRpdFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/Admin/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/Admin/Users/NewUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcTmV3VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Acount/ActiveRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XEFjdGl2ZVJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Acount/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XEZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Acount/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Acount/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Acount/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XFJlc2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Acount/SuccessfulRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XFN1Y2Nlc3NmdWxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Home/OnlinePayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPbmxpbmVQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Shared/Components/CourseGroupComponent/CourseGroupView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ291cnNlR3JvdXBDb21wb25lbnRcQ291cnNlR3JvdXBWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Shared/_ActiveEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BY3RpdmVFbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Shared/_ChangeEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaGFuZ2VFbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Shared/_DefaultLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EZWZhdWx0TGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Shared/_ForgotPasswordEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb3Jnb3RQYXNzd29yZEVtYWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Shared/_MainMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYWluTWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Shared/_MetaTags.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZXRhVGFncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/Shared/_Styles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdHlsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/projects/c\#/TirdaadSchool/TirdaadSchool/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

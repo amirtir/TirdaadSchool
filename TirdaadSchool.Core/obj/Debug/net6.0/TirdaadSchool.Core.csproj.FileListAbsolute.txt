@@ -1,0 +1,15 @@
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\bin\Debug\net6.0\TirdaadSchool.Core.deps.json
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\bin\Debug\net6.0\TirdaadSchool.Core.dll
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\bin\Debug\net6.0\TirdaadSchool.Core.pdb
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\bin\Debug\net6.0\TirdaadSchool.DataLayer.dll
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\bin\Debug\net6.0\TirdaadSchool.DataLayer.pdb
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\obj\Debug\net6.0\TirdaadSchool.Core.csproj.AssemblyReference.cache
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\obj\Debug\net6.0\TirdaadSchool.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\obj\Debug\net6.0\TirdaadSchool.Core.AssemblyInfoInputs.cache
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\obj\Debug\net6.0\TirdaadSchool.Core.AssemblyInfo.cs
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\obj\Debug\net6.0\TirdaadSchool.Core.csproj.CoreCompileInputs.cache
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\obj\Debug\net6.0\TirdaadSchool.Core.csproj.CopyComplete
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\obj\Debug\net6.0\TirdaadSchool.Core.dll
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\obj\Debug\net6.0\TirdaadSchool.Core.pdb
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\obj\Debug\net6.0\ref\TirdaadSchool.Core.dll
+F:\projects\c#\TirdaadSchool\TirdaadSchool.Core\bin\Debug\net6.0\ref\TirdaadSchool.Core.dll

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using TirdaadSchool.Core.Services.Interfaces;
 
 namespace TirdaadSchool.Web.Controllers
@@ -10,10 +11,15 @@ namespace TirdaadSchool.Web.Controllers
     public class HomeController : Controller
     {
         private IUserService _userService;
-        public HomeController(IUserService userService)
+        private ICourseService _courseservice;
+
+        public HomeController(IUserService userService, ICourseService course)
         {
-              _userService=userService;
+            _userService = userService;
+            _courseservice = course;
         }
+
+
         public IActionResult Index()
         {
             return View();
@@ -40,6 +46,13 @@ namespace TirdaadSchool.Web.Controllers
             }
 
             return View();
+        }
+
+       [Route("Home/GetSubGroups/{id}")]
+        public IActionResult GetSubGroups(int id)
+        {
+            var  subgroups=_courseservice.GetSubGroupsForCourses(id);
+            return Json(new SelectList(subgroups, "Value", "Text"));
         }
     }
 }

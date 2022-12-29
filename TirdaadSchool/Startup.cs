@@ -57,6 +57,7 @@ namespace TirdaadSchool
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IViewRenderService, RenderViewToString>();
             services.AddTransient<IPermissionService, PermissionService>();
+            services.AddTransient<ICourseService, CourseService>();
 
 
         }

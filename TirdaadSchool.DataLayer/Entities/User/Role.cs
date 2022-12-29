@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using TirdaadSchool.DataLayer.Entities.Permissions;
 
 namespace TirdaadSchool.DataLayer.Entities.User
 {
@@ -20,7 +21,7 @@ namespace TirdaadSchool.DataLayer.Entities.User
         #region Relations
 
         public virtual IList<UserRole> UserRoles { get; set; }
-
+        public List<RolePermission> rolePermissions { get; set; }
 
         #endregion
 

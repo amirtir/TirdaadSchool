@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Collections.Generic;
 using TirdaadSchool.Core.Services.Interfaces;
 using TirdaadSchool.DataLayer.Entities.User;
 
@@ -18,9 +19,11 @@ namespace TirdaadSchool.Web.Pages.Admin.Roles
         public void OnGet(int id)
         {
             Role=_permissionService.GetRoleById(id);
+            ViewData["Permissions"] = _permissionService.GetAllPermissions();
+            ViewData["SelectedPermissions"] = _permissionService.SelectedPermissions(id);
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPost(List<int> SelectedPermissions)
         {
             if (!ModelState.IsValid)
                 return Page();
@@ -29,7 +32,7 @@ namespace TirdaadSchool.Web.Pages.Admin.Roles
             _permissionService.UpdateRole(Role);
 
             //TODO Add Permission
-
+            _permissionService.UpdatePermissionsRoles(Role.RoleId, SelectedPermissions);
             return RedirectToPage("Index");
         }
     }

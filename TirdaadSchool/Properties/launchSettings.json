@@ -3,8 +3,8 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:49651",
-      "sslPort": 44324
+      "applicationUrl": "http://localhost:49500",
+      "sslPort": 44320
     }
   },
   "profiles": {
@@ -18,7 +18,7 @@
     "TirdaadSchool": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "applicationUrl": "https://localhost:5001;http://localhost:5500",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

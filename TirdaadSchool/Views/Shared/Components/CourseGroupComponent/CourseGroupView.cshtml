@@ -1,0 +1,33 @@
+﻿@model List<TirdaadSchool.DataLayer.Entities.Course.CourseGroup>
+
+<div class="main-menu">
+    <div class="container">
+        <nav>
+            <span class="responsive-sign"><i class="zmdi zmdi-menu"></i></span>
+            <ul>
+                @foreach (var item in Model.Where(v => v.ParentId == null))
+                {
+                    <li>
+                        <a href=""> @item.GroupName </a>
+                       @if (Model.Any(g => g.ParentId == item.GroupId))
+                       {
+                           <ul>
+                               @foreach (var sub in Model.Where(p => p.ParentId == item.GroupId))
+                               {
+                                   <li><a href=""> @sub.GroupName </a></li>
+                                
+                               }
+                              
+                           </ul>  
+                       }
+                       
+                    </li>
+                }
+          
+
+
+
+            </ul>
+        </nav>
+    </div>
+</div>

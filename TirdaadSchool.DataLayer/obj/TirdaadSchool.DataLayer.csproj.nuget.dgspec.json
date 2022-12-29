@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj": {}
+    "F:\\projects\\c#\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj": {
+    "F:\\projects\\c#\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj",
+        "projectUniqueName": "F:\\projects\\c#\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj",
         "projectName": "TirdaadSchool.DataLayer",
-        "projectPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj",
+        "projectPath": "F:\\projects\\c#\\TirdaadSchool\\TirdaadSchool.DataLayer\\TirdaadSchool.DataLayer.csproj",
         "packagesPath": "C:\\Users\\Amir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Amir\\source\\repos\\TirdaadSchool\\TirdaadSchool.DataLayer\\obj\\",
+        "outputPath": "F:\\projects\\c#\\TirdaadSchool\\TirdaadSchool.DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -21,15 +21,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -40,22 +40,28 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.16, )"
+              "version": "[6.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.16, )"
+              "version": "[6.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.16, )"
+              "version": "[6.0.11, )"
             }
           },
           "imports": [
@@ -64,7 +70,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -73,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
