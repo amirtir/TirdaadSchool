@@ -45,6 +45,7 @@ namespace TirdaadSchool
             {
                 options.LoginPath = "/Login";
                 options.LogoutPath = "/LogOut";
+                options.AccessDeniedPath="/";
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(43200);
             });
 

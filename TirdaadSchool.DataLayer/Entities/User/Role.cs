@@ -20,7 +20,7 @@ namespace TirdaadSchool.DataLayer.Entities.User
         public bool IsDeleted { get; set; }
         #region Relations
 
-        public virtual IList<UserRole> UserRoles { get; set; }
+        public  List<UserRole> UserRoles { get; set; }
         public List<RolePermission> rolePermissions { get; set; }
 
         #endregion

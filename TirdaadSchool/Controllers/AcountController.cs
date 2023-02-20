@@ -129,8 +129,18 @@ namespace TirdaadSchool.Web.Controllers
                     {
 
                         new Claim(ClaimTypes.NameIdentifier,user.UserId.ToString()),
-                        new Claim(ClaimTypes.Name,user.UserName)
+                        new Claim(ClaimTypes.Name,user.UserName),
+
                     };
+                    if(user.UserRoles!=null)
+                    {
+                        foreach (var item in user.UserRoles)
+                        {
+                            claims.Add(new Claim(ClaimTypes.Role,item.role.RoleName) );
+                        }
+                    }
+                    
+                  
 
                     var identify = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     var principal = new ClaimsPrincipal(identify);

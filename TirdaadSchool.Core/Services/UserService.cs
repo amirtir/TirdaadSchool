@@ -75,7 +75,9 @@ namespace TirdaadSchool.Core.Services
             string fixedEmail = FixedText.FixedEmail(loginViewModel.Email);
             string passwordHash = PasswordHelper.EncodePasswordMd5(loginViewModel.Password);
 
-            return _DbContext.Users.SingleOrDefault(u => u.Email == fixedEmail && u.Password == passwordHash);
+            return _DbContext.Users.Include(u=>u.UserRoles)
+                .ThenInclude(r=>r.role)
+                .SingleOrDefault(u => u.Email == fixedEmail && u.Password == passwordHash);
         }
 
         public bool ActiveAcount(string activecode)
