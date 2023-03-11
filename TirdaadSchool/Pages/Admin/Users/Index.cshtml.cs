@@ -5,8 +5,10 @@ using TirdaadSchool.Core.Services.Interfaces;
 
 namespace TirdaadSchool.Web.Pages.Admin.Users
 {
+
     public class IndexModel : PageModel
     {
+       [Authorize(Roles = "Admin")]
         IUserService _userservice;
         public IndexModel( IUserService userService )
         {

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gFo5b1khb4/ghAddqYlFYF8lGCKItdogGrJom9V/ipgBKJ2AuSVEMqlMm7t9aktkgbxH2riisxa4rXDmm+yvtA==",
+  "dgSpecHash": "mQEYWtrFwxrr7U6/vxkTUDyFfdvFxS1uWhDWvI8lOz+uiFzxRfZPz6H+cctiDQFtfICifZvNGJVNW9xsS8StzA==",
   "success": true,
   "projectFilePath": "F:\\projects\\c#\\TirdaadSchool\\TirdaadSchool\\TirdaadSchool.Web.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Amir\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Amir\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Amir\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\Amir\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
@@ -44,7 +45,7 @@
     "C:\\Users\\Amir\\.nuget\\packages\\microsoft.codeanalysis.razor\\2.2.0\\microsoft.codeanalysis.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Amir\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\1.3.0\\microsoft.codeanalysis.visualbasic.1.3.0.nupkg.sha512",
     "C:\\Users\\Amir\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\2.8.0\\microsoft.codeanalysis.workspaces.common.2.8.0.nupkg.sha512",
-    "C:\\Users\\Amir\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Amir\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Amir\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Amir\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Amir\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.1.0\\microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512",

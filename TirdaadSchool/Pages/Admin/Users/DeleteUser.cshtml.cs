@@ -4,6 +4,7 @@ using TirdaadSchool.Core.Services.Interfaces;
 using TirdaadSchool.Core.DTOs;
 namespace TirdaadSchool.Web.Pages.Admin.Users
 {
+   [Authorize(Roles = "Admin")]
     public class DeleteUserModel : PageModel
     {
        private IUserService _userService;

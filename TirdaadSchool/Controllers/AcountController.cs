@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 
 using Microsoft.AspNetCore.Authentication;
 using TirdaadSchool.Core.Senders;
+using TirdaadSchool.Core.Tools;
 
 namespace TirdaadSchool.Web.Controllers
 {

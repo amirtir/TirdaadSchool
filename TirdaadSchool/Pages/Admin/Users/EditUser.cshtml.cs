@@ -7,6 +7,7 @@ using TirdaadSchool.DataLayer.Entities.User;
 
 namespace TirdaadSchool.Web.Pages.Admin.Users
 {
+   [Authorize(Roles = "Admin")]
     public class EditUserModel : PageModel
     {
         IPermissionService _PermissionService;
